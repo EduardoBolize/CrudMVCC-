@@ -9,6 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.html linguist-detectable=false
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
