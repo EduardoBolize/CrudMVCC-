@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+html {
+    font-size: 14px;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #071827;
+    color: rgba(255,255,255,.75);
+}
+
+footer {
+    background-color: #1d2a35 !important;
+}
+
+button {
+    background-color: #888888;
+    border-radius: 15px;
+    border: 5px black;
+}
+
+    button:hover {
+        background-color: #888888;
+    }
+
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 13.1em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255,255,255,.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+tr {
+    align-items: center;
+    justify-content: center;
+}

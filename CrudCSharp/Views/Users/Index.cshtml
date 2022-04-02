@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CrudCSharp.Models.Users>
+
+@{
+    ViewData["Title"] = "Usuários";
+}
+
+<h1>Usuários</h1>
+
+<p>
+    <button id="botao" style="background-color:white; ">
+        <a asp-action="Create" style="color: black; text-decoration: none; margin: 30px; font-size: 20px;">
+            Criar novo usuário
+            </a>
+    </button>
+</p>
+<table class="table" style="background-color:white; align-items:center">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                <button class="btn"><a asp-action="Edit" style="text-decoration: none; color: #071827;" asp-route-id="@item.Id">Editar</a></button>
+                <button class="btn"><a asp-action="Details" style="text-decoration: none; color: #071827;" asp-route-id="@item.Id">Detalhes</a></button>
+                <button class="btn"><a asp-action="Delete" style="text-decoration: none; color: #071827;" asp-route-id="@item.Id">Deletar</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
