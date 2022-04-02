@@ -3,6 +3,8 @@
 ###############################################################################
 * text=auto
 
+*.html linguist-detectable=false
+
 ###############################################################################
 # Set default behavior for command prompt diff.
 #
@@ -43,8 +45,6 @@
 #*.jpg   binary
 #*.png   binary
 #*.gif   binary
-
-*.html linguist-detectable=false
 
 ###############################################################################
 # diff behavior for common document formats
